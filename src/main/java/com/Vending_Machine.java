@@ -10,13 +10,13 @@ public class Vending_Machine {
 
     int MAX_ITEM_COUNT;
 
-    //Starting each vending machine with $20
-    int numQ = 50; //Number of Quarters, $12.50
-    int numN = 50; //Number of Nickels, $2.50
-    int numD = 50; //Number of Dimesm $5.00
+//    //Starting each vending machine with $20
+//    int numQ = 50; //Number of Quarters, $12.50
+//    int numN = 50; //Number of Nickels, $2.50
+//    int numD = 50; //Number of Dimesm $5.00
 
     Map<Products, Integer> inStock = new HashMap<Products, Integer>();
-    //Coins coin = new Coins();
+    CoinBox box = new CoinBox();
 
     public Vending_Machine(){};
 
