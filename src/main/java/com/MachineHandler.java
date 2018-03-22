@@ -39,9 +39,9 @@ public class MachineHandler {
         int d = 0;
         int n = 0;
         for(int i = 0; i < key.size(); i++){
-            q += handler.get(key.get(i)).numQ;
-            d += handler.get(key.get(i)).numD;
-            n += handler.get(key.get(i)).numN;
+            q += handler.get(key.get(i)).box.getNumQ();
+            d += handler.get(key.get(i)).box.getNumD();
+            n += handler.get(key.get(i)).box.getNumN();
         }
 
         return "Location: " + location + "\nNumber of Quarters: " + q +

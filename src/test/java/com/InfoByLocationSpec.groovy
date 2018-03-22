@@ -28,9 +28,9 @@ class InfoByLocationSpec extends Specification {
         int d = 0;
         int n = 0;
         for(int i = 0; i < keys.size(); i++){
-            q += handler.handler.get(keys[i]).numQ;
-            d += handler.handler.get(keys[i]).numD;
-            n += handler.handler.get(keys[i]).numN
+            q += handler.handler.get(keys[i]).box.numQ;
+            d += handler.handler.get(keys[i]).box.numD;
+            n += handler.handler.get(keys[i]).box.numN
         }
 
 
