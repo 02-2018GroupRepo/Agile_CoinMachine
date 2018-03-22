@@ -61,7 +61,7 @@ public class MachineHandler {
 
     public double getTotalofAll(){
         double total = 0.0;
-        
+
         for(Vending_Machine object: handler.values()){
             total += object.box.getTotalValue();
         }
