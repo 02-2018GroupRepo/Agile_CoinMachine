@@ -65,6 +65,7 @@ class InfoByLocationSpec extends Specification {
 
         double total = (q * 0.25) + (d * 0.10) + (n * 0.05)
 
+
         then: "the total of all machines is returned"
         println total
     }
