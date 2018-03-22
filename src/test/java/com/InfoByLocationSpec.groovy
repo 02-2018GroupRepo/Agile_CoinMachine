@@ -59,12 +59,10 @@ class InfoByLocationSpec extends Specification {
         when: "the operator wants to know total amount in the machines"
         ArrayList<Integer> keys = handler.findMachinesbyLocation(location)
 
-        int q = 2;
-        int d = 1;
-        int n = 1;
-
-        double total = (q * 0.25) + (d * 0.10) + (n * 0.05)
-
+        double total = 0;
+        for(int i = 0; i < keys.size(); i++){
+            total += handler.handler.get(keys[i]).box.getTotalValue();
+        }
 
         then: "the total of all machines is returned"
         println total

@@ -49,15 +49,15 @@ public class MachineHandler {
                                          "\nNumber of Nickels: " + n ;
     }
 
-//    public String getTotalMoneyByLocation(String location){
-//        ArrayList<Integer> key = findMachinesbyLocation(location);
-//        double total = 0;
-//        for(int i = 0; i < key.size(); i++){
-//            total += handler.get(key.get(i)).box.getTotalValue();
-//        }
-//
-//        return "Location: " + location + "\nTotal Money: $" + total;
-//    }
+    public String getTotalMoneyByLocation(String location){
+        ArrayList<Integer> key = findMachinesbyLocation(location);
+        double total = 0;
+        for(int i = 0; i < key.size(); i++){
+            total += handler.get(key.get(i)).box.getTotalValue();
+        }
+
+        return "Location: " + location + "\nTotal Money: $" + total;
+    }
 
 
 }
