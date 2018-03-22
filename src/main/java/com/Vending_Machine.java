@@ -20,9 +20,9 @@ public class Vending_Machine {
 
     public Vending_Machine(){};
 
-    public Vending_Machine(String location){
+    public Vending_Machine(int ID, String location){
         this.location = location;
-        this.ID = ++ID;
+        this.ID = ID;
     }
 
     public String getLocation(){
