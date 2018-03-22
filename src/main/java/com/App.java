@@ -10,7 +10,7 @@ public class App
         System.out.println("Enter Option stuff");
         String option = scan.next();
 
-        if(option.equals("operator")){
+        if(option.toLowerCase().equals("operator")){
             SecurityCode security = new SecurityCode();
             System.out.println("Enter Security Code: ");
             String code = scan.next();
