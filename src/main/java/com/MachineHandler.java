@@ -49,5 +49,24 @@ public class MachineHandler {
                                          "\nNumber of Nickels: " + n ;
     }
 
+    public String getTotalMoneyByLocation(String location){
+        ArrayList<Integer> key = findMachinesbyLocation(location);
+        double total = 0;
+        for(int i = 0; i < key.size(); i++){
+            total += handler.get(key.get(i)).box.getTotalValue();
+        }
+
+        return "Location: " + location + "\nTotal Money: $" + total;
+    }
+
+    public double getTotalofAll(){
+        double total = 0.0;
+        
+        for(Vending_Machine object: handler.values()){
+            total += object.box.getTotalValue();
+        }
+
+        return total;
+    }
 
 }
