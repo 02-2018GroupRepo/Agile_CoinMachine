@@ -31,5 +31,23 @@ public class MachineHandler {
         return foundMachines;
     }
 
+    public String getCoinTotalsbyLocation(String location){
+
+        ArrayList<Integer> key = findMachinesbyLocation(location);
+
+        int q = 0;
+        int d = 0;
+        int n = 0;
+        for(int i = 0; i < key.size(); i++){
+            q += handler.get(key.get(i)).numQ;
+            d += handler.get(key.get(i)).numD;
+            n += handler.get(key.get(i)).numN;
+        }
+
+        return "Location: " + location + "\nNumber of Quarters: " + q +
+                                         "\nNumber of Dimes: " + d +
+                                         "\nNumber of Nickels: " + n ;
+    }
+
 
 }
