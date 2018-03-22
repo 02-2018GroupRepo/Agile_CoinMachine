@@ -2,6 +2,7 @@ package com;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Map;
 
 public class MachineHandler {
 
@@ -67,6 +68,20 @@ public class MachineHandler {
         }
 
         return total;
+    }
+
+    public static String getIndividualCoinTotalsOfAllMachines(Map<Integer, Vending_Machine> totalVendingMachines){
+         int totalQuarters = 0;
+         int totalDimes = 0;
+         int totalNickels = 0;
+         for(Vending_Machine machine: totalVendingMachines.values()){
+             totalQuarters += machine.box.getNumQ();
+             totalDimes += machine.box.getNumD();
+             totalNickels += machine.box.getNumN();
+         }
+
+        return "Quarter: " + totalQuarters + "\nDimes: " + totalDimes + "\nNickels: " + totalNickels;
+
     }
 
 }
