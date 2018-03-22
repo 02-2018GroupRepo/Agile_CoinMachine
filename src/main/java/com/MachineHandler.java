@@ -59,5 +59,14 @@ public class MachineHandler {
         return "Location: " + location + "\nTotal Money: $" + total;
     }
 
+    public double getTotalofAll(){
+        double total = 0.0;
+        
+        for(Vending_Machine object: handler.values()){
+            total += object.box.getTotalValue();
+        }
+
+        return total;
+    }
 
 }
