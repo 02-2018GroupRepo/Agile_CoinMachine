@@ -21,15 +21,23 @@ class InfoByLocationSpec extends Specification {
         handler.addMachine(machine2)
         handler.addMachine(machine3)
 
+        when: "an operator calls checkMoney"
         ArrayList<Integer> keys = handler.findMachinesbyLocation(location)
 
+        int q = 0;
+        int d = 0;
+        int n = 0;
         for(int i = 0; i < keys.size(); i++){
-            println keys[i]
+            q += handler.handler.get(keys[i]).numQ;
+            d += handler.handler.get(keys[i]).numD;
+            n += handler.handler.get(keys[i]).numN
         }
-        when: "an operator calls checkMoney"
+
 
         then: "the individual amount of coins is returned"
-
+        println "Number of Quarters " + q
+        println "Number of Dimes " + d
+        println "Number of Nickels " + n
     }
 
 }
