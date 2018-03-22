@@ -12,13 +12,13 @@ public class CoinBox {
 
     public void insertCoin(Coin coin){
         totalValue += coin.getCoinValue();
-        if(coin.getCoinValue() == 0.25){
+        if(coin.getCoinValue() == Coin.getQUARTER()){
             numQ++;
         }
-        else if(coin.getCoinValue() == 0.10){
+        else if(coin.getCoinValue() == Coin.getDIME()){
             numD++;
         }
-        else{
+        else if(coin.getCoinValue() == Coin.getNICKEL()){
             numN++;
         }
     }

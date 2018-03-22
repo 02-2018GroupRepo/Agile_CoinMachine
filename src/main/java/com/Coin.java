@@ -18,6 +18,18 @@ private double coinValue;
         }
     }
 
+    public static double getNICKEL() {
+        return NICKEL;
+    }
+
+    public static double getDIME() {
+        return DIME;
+    }
+
+    public static double getQUARTER() {
+        return QUARTER;
+    }
+
     public double getCoinValue(){
         return coinValue;
     }
