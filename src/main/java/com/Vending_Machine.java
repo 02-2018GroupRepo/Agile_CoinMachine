@@ -49,7 +49,6 @@ public class Vending_Machine {
     public void initializeItemQueues() {
         for (int i = 0; i < products2DArray.length; i++) {
             for (int j = 0; j < products2DArray[i].length; j++) {
-
                 products2DArray[i][j] = new ArrayDeque<Products>();
             }
         }
@@ -64,15 +63,24 @@ public class Vending_Machine {
         return inStock;
     }
 
-    public boolean coinReturn(double price, double moneyGiven) {
-        boolean answer = false;
-        if (moneyGiven >= price) {
-            answer = true;
-            return answer;
-        } else {
-            return answer;
+    public void buyProduct(int column, int row, int q, int d, int n){
+        double total = (q * 0.25) + (d * 0.10) + (n * .05);
+        if(isInStock(column,row)){
+            if(coinReturn(products2DArray[column][row].element().getRetailPrice(), total)){
+                //
+            }
+            else{
+                //return money because didnt have enough
+            }
         }
 
+
+    }
+
+    public boolean coinReturn(double price, double moneyGiven) {
+        if (moneyGiven >= price)
+            return true;
+        return false;
     }
 
 }
