@@ -22,4 +22,8 @@ class CoinReturn extends Specification {
         then: "Inserted money is returned"
         test == false;
     }
+
+    def "Item is out of Stock"(){
+        
+    }
 }
