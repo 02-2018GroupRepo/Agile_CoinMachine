@@ -61,6 +61,7 @@ public class Vending_Machine {
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     public boolean coinReturn(double price, double moneyGiven){
         boolean answer = false;
         if(moneyGiven >= price){
@@ -71,6 +72,9 @@ public class Vending_Machine {
             return answer;
         }
 =======
+=======
+
+>>>>>>> 513ab7433d72e806f4216378cd3d003289c7a6b8
     public void initializeItemQueues (){
         for (int i = 0; i < products2DArray.length; i++){
             for (int j = 0; j < products2DArray[i].length; j++){
@@ -87,7 +91,22 @@ public class Vending_Machine {
             System.out.println("Out of stock, idiot.");
         }
     return inStock;
+<<<<<<< HEAD
 >>>>>>> 6b35bb72ff38ca247e76a3626351512b1b0d4c91
+=======
+    }
+
+    public boolean coinReturn(double price, double moneyGiven){
+        boolean answer = false;
+        if(moneyGiven >= price){
+            answer = true;
+            return answer;
+        }
+        else{
+            return answer;
+        }
+
+>>>>>>> 513ab7433d72e806f4216378cd3d003289c7a6b8
     }
 
 }
