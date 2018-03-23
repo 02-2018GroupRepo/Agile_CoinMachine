@@ -23,7 +23,6 @@ public class Vending_Machine {
         initializeItemQueues();
     }
 
-
     public Vending_Machine(int ID, String location) {
         this.location = location;
         this.ID = ID;
@@ -50,11 +49,11 @@ public class Vending_Machine {
     public void initializeItemQueues() {
         for (int i = 0; i < products2DArray.length; i++) {
             for (int j = 0; j < products2DArray[i].length; j++) {
+
                 products2DArray[i][j] = new ArrayDeque<Products>();
             }
         }
     }
-
 
     public boolean isInStock(int column, int row) {
         boolean inStock = true;
