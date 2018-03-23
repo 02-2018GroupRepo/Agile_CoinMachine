@@ -5,7 +5,7 @@ public class Products {
     private String id; //needs to be unique
     private String name;
     private String description;
-    private double wsalePrice; //cost of item to venching machine company
+    private double wsalePrice; //cost of item to vending machine company
     private double retailPrice; //price vending machine is using
 
     public Products(String id, String name, String description, double salePrice, double retailPrice){
@@ -35,5 +35,7 @@ public class Products {
     public double getRetailPrice() {
         return retailPrice;
     }
+
+    Products sprite = new Products("1", "sprite", "drink", 1.00, 2.00);
 
 }
