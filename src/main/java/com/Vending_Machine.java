@@ -5,7 +5,7 @@ import java.util.*;
 public class Vending_Machine {
 
     String location;
-    String company = "Shane";
+    String company = "Shame";
     int ID = 0;
 
     int MAX_ITEM_COUNT;
