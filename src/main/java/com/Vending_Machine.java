@@ -60,6 +60,7 @@ public class Vending_Machine {
         }
     }
 
+
     public void initializeItemQueues (){
         for (int i = 0; i < products2DArray.length; i++){
             for (int j = 0; j < products2DArray[i].length; j++){
@@ -76,6 +77,18 @@ public class Vending_Machine {
             System.out.println("Out of stock, idiot.");
         }
     return inStock;
+    }
+
+    public boolean coinReturn(double price, double moneyGiven){
+        boolean answer = false;
+        if(moneyGiven >= price){
+            answer = true;
+            return answer;
+        }
+        else{
+            return answer;
+        }
+
     }
 
 }
