@@ -95,6 +95,10 @@ public class Vending_Machine {
         if(isInStock(column,row)){
             if(coinReturn(products2DArray[column][row].element().getRetailPrice(), total)){
                 //buy stuff
+                products2DArray[column][row].remove();
+                if(total > products2DArray[column][row].element().getRetailPrice()){
+                    getChange(total - products2DArray[column][row].element().getRetailPrice());
+                }
                 return 1;
             }
             else{

@@ -36,6 +36,4 @@ public class Products {
         return retailPrice;
     }
 
-    Products sprite = new Products("1", "sprite", "drink", 1.00, 2.00);
-
 }

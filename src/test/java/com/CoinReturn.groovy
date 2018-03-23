@@ -62,4 +62,28 @@ class CoinReturn extends Specification {
         testChange == 0.85
 
     }
+
+    def "Actually purchasing item"(){
+        given: "A vending machine"
+        Vending_Machine machine = new Vending_Machine()
+
+        Products chips = new Products("A1", "chips", "potato", 0.50, 1.00);
+        machine.products2DArray[0][0].add(chips)
+        machine.products2DArray[0][0].add(chips)
+
+        and: "money was inserted"
+        int q = 6
+        int n = 0
+        int d = 0;
+
+        when: "item that is in stock is selected"
+        and: "enough money was inserted"
+
+        machine.buyProduct(0,0, q, d, n)
+        int size = machine.products2DArray[0][0].size()
+
+        then: "item is removed from vending machine"
+        size == 1;
+
+    }
 }
