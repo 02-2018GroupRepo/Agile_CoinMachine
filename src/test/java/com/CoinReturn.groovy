@@ -24,6 +24,42 @@ class CoinReturn extends Specification {
     }
 
     def "Item is out of Stock"(){
-        
+        given:"Item is Selected"
+        int column = 0; int row = 0;
+
+        and: "item is out of stock"
+        Vending_Machine machine = new Vending_Machine()
+
+        and: "money has been inserted"
+        int q = 1; int d = 1; int n = 1;
+
+        when: "out of stock is selected"
+
+        int itemIsgone = machine.buyProduct(column, row, q, d, n)
+
+        then: "return inserted moneys"
+        itemIsgone == 0
+
+    }
+
+    def "Too many coins"(){
+        given:"Coins were inserted"
+        double total = 1.50; //buck fity
+
+        and:"an item price"
+        double itemPrice = 0.65;
+
+        when:"money inserted is greater than price"
+        Vending_Machine machine = new Vending_Machine()
+
+        double testChange;
+
+        if(machine.coinReturn(itemPrice, total)){
+            testChange = machine.getChange(total-itemPrice)
+        }
+
+        then:"return difference between inserted money and item price"
+        testChange == 0.85
+
     }
 }

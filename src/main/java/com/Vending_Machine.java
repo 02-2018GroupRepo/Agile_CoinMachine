@@ -45,6 +45,33 @@ public class Vending_Machine {
         this.company = company;
     }
 
+    public double getChange(double change){
+
+        boolean done = false;
+        int q = 0, d = 0, n = 0;
+        while(!done){
+            if(((change - .25) >= 0.0) && (box.getNumQ() > 0)){
+                box.setNumQ(box.getNumQ() - 1);
+                q++;
+                change -= .25;
+            }
+            else if(((change - .10) >= 0.0)  && (box.getNumD() > 0)){
+                box.setNumD(box.getNumD() - 1);
+                d++;
+                change -= .10;
+            }
+            else if(((change - .05) >= 0.0) && (box.getNumN() > 0)){
+                box.setNumN(box.getNumN() - 1);
+                n++;
+                change -= 0.05;
+            }
+            else
+                done = true;
+        }
+        System.out.println("Your Change: "+ change + "\n" + q + " Quarters " + d + " Dimes " + n + " Nickels");
+
+        return change;
+    }
 
     public void initializeItemQueues() {
         for (int i = 0; i < products2DArray.length; i++) {
@@ -63,17 +90,23 @@ public class Vending_Machine {
         return inStock;
     }
 
-    public void buyProduct(int column, int row, int q, int d, int n){
-        double total = (q * 0.25) + (d * 0.10) + (n * .05);
+    public int buyProduct(int column, int row, int q, int d, int n){
+        double total = (q * 0.25) + (d * 0.10) + (n * 0.05);
         if(isInStock(column,row)){
             if(coinReturn(products2DArray[column][row].element().getRetailPrice(), total)){
-                //
+                //buy stuff
+                return 1;
             }
             else{
                 //return money because didnt have enough
+                return 2;
             }
         }
-
+        else{
+            //item is out of stock
+            System.out.printf("Here is your money back $%.2f\n", total);
+            return 0;
+        }
 
     }
 
