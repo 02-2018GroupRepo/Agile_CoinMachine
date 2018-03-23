@@ -55,4 +55,15 @@ public class Vending_Machine {
         }
     }
 
+    public boolean coinReturn(double price, double moneyGiven){
+        boolean answer = false;
+        if(moneyGiven >= price){
+            answer = true;
+            return answer;
+        }
+        else{
+            return answer;
+        }
+    }
+
 }
