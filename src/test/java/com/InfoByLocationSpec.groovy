@@ -45,6 +45,7 @@ class InfoByLocationSpec extends Specification {
         given: "A location"
         String location = "Atlanta"
 
+        and: "a collection of vending machines"
         Vending_Machine machine = new Vending_Machine(1,"Atlanta")
         Vending_Machine machine1 = new Vending_Machine(2,"Atlanta")
         Vending_Machine machine2 = new Vending_Machine(3,"Boston")
@@ -65,7 +66,7 @@ class InfoByLocationSpec extends Specification {
         }
 
         then: "the total of all machines is returned"
-        println total
+        total == 0
     }
     def "im testing how queues work"() {
         given: "stuff"

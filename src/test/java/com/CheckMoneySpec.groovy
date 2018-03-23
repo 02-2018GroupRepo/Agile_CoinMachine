@@ -17,7 +17,7 @@ class CheckMoneySpec extends Specification {
         Coin dime = new Coin("dime");
         Coin quarter = new Coin("quarter");
 
-        List<Coin> coinList = new ArrayList<>();
+        List<Coin> coinList = new ArrayList<Coin>();
         coinList.add(nickel);
         coinList.add(dime);
         coinList.add(quarter);
@@ -30,12 +30,8 @@ class CheckMoneySpec extends Specification {
         double amount = vendingMachine.getTotalValue();
 
         then: "the total value of all coins in the machine is returned"
+        amount == 0.65
 
-        List<Coin> CoinList = new ArrayList<>();
-        coinList(nickel);
-        coinList(dime);
-        coinList(quarter);
-        coinList(quarter);
     }
 
 }
