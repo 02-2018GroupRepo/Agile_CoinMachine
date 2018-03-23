@@ -50,4 +50,12 @@ public class CoinBox {
     public void setNumN(int numN) {
         this.numN = numN;
     }
+    public String getIndividualCoincounts() {
+        String IndividualCoincounts= (numQ+"number of quarters"+numD+"number of Dimes"+numN+"number of nickels");
+        return  IndividualCoincounts;}
+
+
+
+
+
 }

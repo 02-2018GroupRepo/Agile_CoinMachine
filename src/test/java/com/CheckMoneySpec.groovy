@@ -12,6 +12,7 @@ class CheckMoneySpec extends Specification {
         Machine vendingMachine = new Machine();
 
         and: "a collection of coins"
+
         Coin nickel = new Coin("nickel");
         Coin dime = new Coin("dime");
         Coin quarter = new Coin("quarter");
