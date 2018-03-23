@@ -24,13 +24,18 @@ public class App
 
             if(security.checkPassword(code)) {
                 //operator stuff
-                System.out.println("1) Get Coin Totals by Location ");
+                System.out.println("1) Get Individuals Coin Totals by Location 2)Get Total of all machines by location");
                 int choice = scan.nextInt();
                 switch (choice) {
                     case 1:
                         System.out.println("Which Location?");
                         System.out.println(handler.getCoinTotalsbyLocation(scan.next()));
                         break;
+                    case 2:
+                        System.out.println("Which Location?");
+                        System.out.println(handler.getTotalMoneyByLocation(scan.next()));
+                        break;
+
 
                 }
             }
